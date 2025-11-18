@@ -1,6 +1,0 @@
-=LET(x,A1,lr,TEXT(INT(x),"00000000000000"),cr,LEFT(lr,7),lc,RIGHT(lr,7),dec,ROUND(x-INT(x),2)*100,c,CHOOSECOLS,
-digits,{"One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"},
-Tenths,{"Ten","Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninety","Hundred"},
-SPELL,LAMBDA(val,abr,IFERROR(IF(val<20,c(digits,val),c(Tenths,LEFT(val,1)) & IFERROR(" " & c(digits,RIGHT(val,1)),"")) & SWITCH(abr,6," Lakh ",5," Thousand ",3," Hundred ",1," Poisa Only.",""),"")),
-Taka,SPELL(--MID(cr,1,2),6) & SPELL(--MID(cr,3,2),5) & SPELL(--MID(cr,5,1),3) & SPELL(--MID(cr,6,2),"") & IF(--cr>0," Crore ","") & SPELL(--MID(lc,1,2),6) & SPELL(--MID(lc,3,2),5) & SPELL(--MID(lc,5,1),3) & SPELL(--MID(lc,6,2),""),
-Poisa,IF(dec<=0," Taka Only."," Taka And " & SPELL(dec,1)),TRIM(Taka & Poisa))
