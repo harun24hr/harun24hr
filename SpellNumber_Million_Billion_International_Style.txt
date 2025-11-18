@@ -1,0 +1,8 @@
+=LET(x,B2,wd,TEXT(INT(x),"000000000000000"),dec,ROUND(x-INT(x),2)*100,c,CHOOSECOLS,
+digits,{"One","Two","Three","Four","Five","Six","Seven","Eight","Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen","Sixteen","Seventeen","Eighteen","Nineteen"},
+Tenths,{"Ten","Twenty","Thirty","Fourty","Fifty","Sixty","Seventy","Eighty","Ninety","Hundred"},
+tr,--MID(wd,1,3),bln,--MID(wd,4,3),mln,--MID(wd,7,3),Hazar,--MID(wd,10,3),Shotok,--MID(wd,13,1),Dosok,--MID(wd,14,2),
+SPELL,LAMBDA(val,abr,IFERROR(IF(val<20,c(digits,val) & abr,c(Tenths,LEFT(val,1))& IFERROR(" " & c(digits,RIGHT(val,1)),"") & abr),"")),
+SPELL3,LAMBDA(vl,abb,IF(vl>99,SPELL(--LEFT(vl,1), " Hundred ") & SPELL(--RIGHT(vl,2), abb),SPELL(vl,abb))),
+Dollor, SPELL3(tr," Trillion ") & SPELL3(bln, " Billion ") & SPELL3(mln, " Million ") & SPELL3(Hazar," Thousand ")  & SPELL(Shotok, " Hundred ") & SPELL(Dosok,""),
+Cent,IF(dec<=0,IF(INT(x)>0," Dollar Only.","")," Dollar And " & SPELL(dec," Cent Only.")),TRIM(Dollor & Cent))
