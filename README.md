@@ -1,4 +1,4 @@
-## I am Md. Harun Or Rashid, Computer Engineer. I am from Bangladesh.
+## I am Md. Harun Or Rashid, Computer Engineer, from Bangladesh.
 ## Facebook https://www.facebook.com/harun24hr365days
 ## Email: harun24hr@gmail.com, harun24hr@hotmail.com
 
