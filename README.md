@@ -1,7 +1,6 @@
-## I am Md. Harun Or Rashid, B. Sc. in Computer Science. Working at Britannia, Bangladesh as IT Manager. I am from Bangladesh.
+## I am Md. Harun Or Rashid, Computer Engineer. I am from Bangladesh.
 ## Facebook https://www.facebook.com/harun24hr365days
-## Email: harun24hr@gmail.com
-## Email: harun24hr@hotmail.com
+## Email: harun24hr@gmail.com, harun24hr@hotmail.com
 
 <!--
 **harun24hr/harun24hr** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
